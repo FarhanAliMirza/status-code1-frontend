@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Checkbox, Table } from "flowbite-react";
 
 const page = () => {
-const [name, setName] = useState("")
+const [name, setName] = useState("Azim")
 const [age, setAge] = useState("")
 const [validateName , setValidateName] = useState(true)
 const [validateAge , setValidateAge] = useState(true)
@@ -76,22 +76,26 @@ const validate = () =>{
     :
     <>
 <div class="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1 p-4 mt-16">
-    <h2 class="flex gap-3 items-center m-auto text-lg font-bold md:flex-col md:gap-2 text-black">
-        <svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" stroke-linecap="round"
-            stroke-linejoin="round" class="h-6 w-6" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-            <line x1="12" y1="9" x2="12" y2="13"></line>
-            <line x1="12" y1="17" x2="12.01" y2="17"></line>
-        </svg>Hey
+    <h2 class="flex-row gap-3 text-4xl	 items-center m-auto text-lg font-bold md:flex-col md:gap-2 text-black">
+      Hey {name} 👋
     </h2>
-    <ul class="flex flex-col gap-3.5 w-full sm:max-w-md m-auto">
-        <li class="w-full bg-green-200 p-3 rounded-md text-black ">
-            Limited operating hours
+    <div class="flex flex-col gap-3.5 w-full  rounded-md  bg-orange-100	sm:max-w-4xl m-auto p-10">
+    <ul class="flex flex-col gap-3.5 w-full sm:max-w-3xl m-auto">
+        <li class="w-full bg-green-200 p-3 text-3xl	 rounded-md text-black font-bold ">
+            Cholestorol 
+            <span className='float-end bg-red-200 py-2 px-10 rounded mx-1'>False</span>
         </li>
-        <li class="w-full bg-green-200 p-3 rounded-md text-black">Limited warranty coverage</li>
-        <li class="w-full bg-green-200 p-3 rounded-md text-black">Limited geographic coverage
+        <li class="w-full bg-green-200 p-3 text-3xl	 rounded-md text-black font-bold">Cardiomegally
+        <span className='float-end bg-red-200 py-2 px-10 rounded mx-1'>False</span>
+        </li>
+        <li class="w-full bg-green-200 p-3  text-3xl	 rounded-md text-black font-bold">Abnormalities
+          <span className='float-end bg-red-200 py-2 px-10 rounded mx-1'>False</span>
+        </li>
+        <li class="w-full bg-green-200 p-3 text-3xl	 rounded-md text-black font-bold">Previous Heart-Attacks
+        <span className='float-end bg-red-200 py-2 px-10 rounded mx-1'>False</span>
         </li>
     </ul>
+    </div>
 </div>
 
     </>
