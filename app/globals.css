@@ -31,3 +31,78 @@ body {
     text-wrap: balance;
   }
 }
+html, body {
+  height: 100%;
+}
+body {
+  background:  rgb(191 219 254);
+  overflow: hidden;
+}
+.ocean {
+  height: 5%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #015871
+}
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x;
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+@keyframes wave {
+  0% {
+    margin-left: 0;
+ }
+  100% {
+    margin-left: -1600px;
+ }
+}
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0, -25px, 0);
+ }
+  50% {
+    transform: translate3d(0, 5px, 0);
+ }
+}
+
+.loading svg polyline {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+  fill: none;
+  stroke: #4dbeff42;
+}
+
+.loading svg polyline#front {
+  fill: none;
+  stroke: #015871;
+  stroke-dasharray: 48, 144;
+  stroke-dashoffset: 192;
+  animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+  72.5% {
+    opacity: 0;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
