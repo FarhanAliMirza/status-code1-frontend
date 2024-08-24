@@ -9,7 +9,7 @@ const [age, setAge] = useState("")
 const [validateName , setValidateName] = useState(true)
 const [validateAge , setValidateAge] = useState(true)
 const [loading, setLoading] = useState(false)
-const [data , setData] = useState(1)
+const [data , setData] = useState(null)
 
 
 
