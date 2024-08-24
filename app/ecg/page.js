@@ -13,6 +13,7 @@ const [data , setData] = useState(1)
 
 
 
+
 const validate = () =>{
     if(name=="")
     {setValidateName(false)}
@@ -76,7 +77,7 @@ const validate = () =>{
     :
     <>
 <div class="flex flex-col mb-8 md:mb-auto gap-3.5 flex-1 p-4 mt-16">
-    <h2 class="flex-row gap-3 text-4xl	 items-center m-auto text-lg font-bold md:flex-col md:gap-2 text-black">
+    <h2 class="flex-row gap-3 text-5xl	 items-center m-auto font-bold md:flex-col md:gap-2 text-black">
       Hey {name} 👋
     </h2>
     <div class="flex flex-col gap-3.5 w-full  rounded-md  bg-orange-100	sm:max-w-4xl m-auto p-10">
