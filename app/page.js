@@ -29,7 +29,7 @@ export default function Home() {
             Comprehensive ECG Analysis
           </div>
           <button
-            className="bg-gray-500 text-white p-2 rounded-lg self-center"
+            className="bg-blue-chill-700 text-white p-2 rounded-lg self-center"
             onClick={() => router.push("/ecg")}
           >
             Proceed
