@@ -1,10 +1,18 @@
 "use client";
 import { useRouter } from "next/navigation";
 import React from "react";
-
+import { useState } from "react";
 export default function Home() {
+  const [loading, setLoading] = useState(false)
   const router = useRouter();
+
+  const proceed = () => {
+    setLoading(true)
+    router.push("/ecg")
+  }
   return (
+    <>
+    {!loading?
     <>
       <div className="bg-blue-200 min-h-screen flex justify-center items-center space">
         <div className="text-center">
@@ -30,16 +38,30 @@ export default function Home() {
           </div>
           <button
             className="bg-blue-chill-700 text-white p-2 rounded-lg self-center"
-            onClick={() => router.push("/ecg")}
+            onClick={() => proceed()}
           >
             Proceed
           </button>
         </div>
       </div>
-      <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
       </div>
+      </>
+      :
+      <div className="loading h-screen flex items-center justify-center">
+          <svg width="64px" height="48px">
+            <polyline
+              points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+              id="back"
+            ></polyline>
+            <polyline
+              points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+              id="front"
+            ></polyline>
+          </svg>
+        </div>}
     </>
   );
 }
