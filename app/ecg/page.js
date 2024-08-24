@@ -48,7 +48,7 @@ const validate = () =>{
      <div class="bg-blue-200 min-h-screen flex items-center">
      <div class="w-full">
      
-       <div class="bg-blue-chill-700 p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
+       <div class="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
          <div>
            <div class="mb-5">
              <label class="block mb-2 font-bold text-gray-600">Username</label>
