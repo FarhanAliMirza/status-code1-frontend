@@ -27,6 +27,8 @@ With regular monitoring, these conditions can be detected early, allowing for ti
 - **Bluetooth/Wi-Fi Module:** For wireless data transmission to a mobile app or computer.
 - **Web App:** An accompanying app that visualizes the ECG data and provides insights.
 
+![device components](./device.jpeg)
+
 
 
 ## How It Works
