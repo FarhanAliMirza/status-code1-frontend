@@ -36,7 +36,6 @@ html, body {
 }
 body {
   background:  rgb(191 219 254);
-  overflow: hidden;
 }
 .ocean {
   height: 5%;
